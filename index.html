@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/> 
+        <title>MyPaint</title>
+</head>
+<body>
+
+        <section class="container">
+                <div class="modalWindow hide">
+                        <div class="closeModal">
+                                <p><i class="modalexit fas fa-xmark"></i></p>
+                        </div>
+                        <div class="quetionModal">
+                                <p>Do you want to save your work ?</p>
+                                <p>There are unsaved chages in "MyPaint"</p>
+                        </div>
+                        <div class="ModalBuuton">
+                                <button class="Save floppyBtn">Save</button>
+                                <button class="not">Don't save</button>
+                                <button class="modalexit">Cancel</button>
+                        </div>
+                </div>
+                <div class="FileTopWrap">
+                        <div class="fileBarClose ">
+                                <div class="farmat hide">
+                                        <p>PNG pictrue</p>
+                                        <p >JPG pictrue</p>
+                                        <p>BMP pictrue</p>
+                                </div>
+                                <ul>
+                                        <li>
+                                                <p><i class="fa-regular fa-file"></i></p>
+                                                <p>
+                                                        <span>new</span>
+                                                        <span>ctrl+N</span>
+                                                </p>
+                                        </li>
+                                        <!-- <li>
+                                                <p><i class="fa-regular fa-folder-open"></i></p>
+                                                <p>
+                                                        <span>open</span>
+                                                        <span>ctrl+O</span>
+                                                </p>
+                                        </li> -->
+                                        <li class="floppyBtn">
+                                                <p><i class="fa-regular fa-floppy-disk"></i></p>
+                                                <p>
+                                                        <span>save</span>
+                                                        <span>ctrl+S</span>
+                                                </p>
+                                        </li>
+                                        <li>
+                                                <p><i class="fa-regular fa-floppy-disk"></i></p>
+                                                <p>
+                                                        <span>save as</span>
+                                                        <span><i class="fa-solid fa-angle-right"></i></span>
+                                                </p>
+                                        </li>
+                                        <li>
+                                                <p><i class="fa-solid fa-gear"></i></p>
+                                                <p>
+                                                        <span>Setting</span>
+                                                </p>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="ViewBarClose">
+                                <ul>
+                                        <li>
+                                                <p><i class="fas fa-expand"></i></p>
+                                                <p>
+                                                        <span>100%</span>
+                                                </p>
+                                        </li>
+                                        <li>
+                                                <p><i class="fa-solid fa-check"></i></i></p>
+                                                <p>
+                                                        <span>status bar</span>
+                                                </p>
+                                        </li>
+                                </ul>
+                        </div>
+                        <ul class="menu__wrap">
+                                <li>
+                                        <button class="fileBtn fileBtn fileBtnClick">file</button>
+                                </li>
+                                <li>
+                                        <button class="fileBtn ViewBtn fileBtnClick">View</button>
+                                </li>
+                                <li>
+                                        <button class="fileBtn floppyBtn"><i class="fa-regular fa-floppy-disk"></i></button>
+                                </li>
+                                <li class="deleticon">
+                                        <button class="fileBtn"><ion-icon style="font-size: 15px; padding-top: 3px;" name="trash-outline"></ion-icon></button>
+                                </li>
+
+                        </ul>
+
+                </div>
+                <div class="MenyuWrap">
+                        <div class="menyuText hide">
+                                <div class="stilText">
+                                        <div>
+                                                <select name="fontfamily" id="fontfamily">
+                                                        <option  value="6">Algerian</option>
+                                                        <option  value="1" selected>Times New Roman</option>
+                                                        <option  value="2">Verdana</option>
+                                                        <option  value="3">Tahoma</option>
+                                                        <option  value="4">Candara</option>
+                                                        <option  value="5">Ink Free</option>
+                                                        <option  value="7">LCDMono2</option>
+                                                        <option  value="8">Calisto MT</option>
+                                                        <option  value="9">Lucida Sans</option>
+                                                        <option  value="10">Calibri</option>
+                                                        <option value="11">Blackadder ITC</option>
+                                                        <option value="12">HP Simplified</option>
+                                                        <option value="13">Wide Latin</option>
+                                                </select>
+                                                <select name="fontsize" id="fontsize">
+                                                        <option value="">8</option><option value="">9</option> <option value="">10</option>
+                                                        <option value="">11</option><option value="">12</option><option value="">13</option>
+                                                        <option value="">14</option><option value="">15</option><option value="">16</option>
+                                                        <option value="" selected>18</option><option value="">20</option><option value="">22</option>
+                                                        <option value="">24</option><option value="">26</option><option value="">28</option>
+                                                        <option value="">36</option><option value="">48</option><option value="">72</option>
+                                                </select>
+                                        </div>
+                                        <div>
+                                                <button value="1"  class="btnFont btnFont1"  style="font-weight: bold;">B</button>
+                                                <button value="2" class="btnFont btnFont2" style="font-style: italic;">I</button>
+                                        </div>
+                                </div>
+                                <div class="inputText">
+                                        <input type="text" class="textinputClass" placeholder="text">
+                                        <button class="fontSave">Save</button>
+                                </div>
+                        </div>
+                        <div class="image">
+                                <div class="ImageButton">
+                                        <button><i class="fas fa-expand"></i></button>
+                                        <button><div class="rotate90">90'</div></button>
+                                        <button><div class="rotate180">180'</div></button>
+                                </div>
+                                <div class="imageText">
+                                        <span>Image</span>
+                                </div>
+                        </div>
+                        <div class="tools">
+                                <div class="toolsButton AAAA">
+                                        <button class="tool active" id="pen"><i class="fas fa-pen"></i></button>
+                                        <button class="fillColor " ><i class="fas fa-fill-drip"></i></button>
+                                        <button class="tool" id="text">A</button>
+                                        <button class="tool" id="ochir"><i class="fas fa-eraser"></i></button>
+                                        <button class="tool" id="chizish"><i class="fa-solid fa-eye-dropper"></i></button>
+                                        <button class="tool" id="katta"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                </div>
+                                <div class="toolsText"><span>tools</span></div>
+                        </div>
+                        <div class="shapes">
+                                <div class="shapesButton AAAA">
+                                        <button class="tool" id="line"><img src="icon/icons8-vertical-line-48.png" alt=""></button>
+                                        <button class="tool" id="aylana"><img src="icon/icons8-circle-90.png" alt=""></button>
+                                        <button class="tool" id="torburchak"><img src="icon/icons8-rounded-rectangle-stroked-32.png" alt=""></button>
+                                        <button class="tool" id="torburchak2"><img src="icon/icons8-rectangular-48.png" alt=""></button>
+                                        <button class="tool" id="togriuchburchak"><img src="icon/icons8-right-triangle-48.png" alt=""></button>
+                                        <button class="tool" id="uchburchak"><img src="icon/icons8-triangle-48.png" alt=""></button>
+                                </div>
+                                <div class="shapesText"><span>shapes</span></div>
+                        </div>
+                        <div class="size">
+                                <div class="sizeButton"><button class="btnSiZe"><img src="icon/icons8-screen-resolution-64.png" alt=""></button></div>
+                                <div class="sizeText"><span>Size</span></div>
+                                <div class="sizeClose hied">
+                                        <ul class="sizeBtnUl">
+                                                <li class="sizeBtnLI">
+                                                        <span>1px</span>
+                                                        <span style="height: 2px;"></span>
+                                                </li>
+                                                <li class="sizeBtnLI">
+                                                        <span>3px</span>
+                                                        <span style="height: 4px;"></span>
+                                                </li>
+                                                <li class="sizeBtnLI">
+                                                        <span>5px</span>
+                                                        <span style="height: 6px;"></span>
+                                                </li>
+                                                <li class="sizeBtnLI">
+                                                        <span>8px</span>
+                                                        <span style="height: 8px;"></span>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="color">
+                                <div class="colorBtn">
+                                        <div class="asosiyColor">
+                                                <div class="color_item" style="background-color: #000000;"></div>
+                                        </div>
+                                        <div class="zahiraColor">
+                                                <div class="color_items" style="background-color: #000000;"></div>
+                                                <div class="color_items" style="background-color: #7F7F7F;"></div>
+                                                <div class="color_items" style="background-color: #880015;"></div>
+                                                <div class="color_items" style="background-color: #ED1C24 ;"></div>
+                                                <div class="color_items" style="background-color: #FF7F27;"></div>
+                                                <div class="color_items" style="background-color: #FFF200;"></div>
+                                                <div class="color_items" style="background-color: #22B14C;"></div>
+                                                <div class="color_items" style="background-color: #00A2E8;"></div>
+                                                <div class="color_items" style="background-color: #3F48CC;"></div>
+                                                <div class="color_items" style="background-color: #A349A4;"></div>
+                                                <div class="color_item Color_p" >
+                                                        <div class="color-picker"></div>
+                                                </div>      
+                                        </div>
+                                </div>
+                                <div class="colortext"><span>colors</span></div>
+                        </div>
+                </div>
+                <div class="CanvasWrap">
+                        <canvas class="canvas"></canvas>
+                </div>
+                <div class="BottomBar">
+                        <div>
+                                <p style=" width: 130px;"> 
+                                        <i class="fas fa-arrow-pointer"></i>
+                                        <span class="mausXY"></span>
+                                
+                                </p>
+                                <p><i class="fas fa-expand"></i></p>
+                                <p>
+                                        <span>
+                                                <img src="icon/icons8-rectangular-90.png" alt="">
+                                        </span>
+                                        <span class="canvasX"></span>
+                                </p>
+                        </div>     
+                        <div>
+                                <p>
+                                        <span class="foiz">100%</span>
+                                        <input class="rangeBottom" min="0" value="100" step="25" max="200" type="range" >
+                                </p>
+                        </div>   
+                </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>
